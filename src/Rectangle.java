@@ -1,22 +1,19 @@
+import java.util.Scanner;
+
 public class Rectangle implements Shape {
-    double a = 3;
-    double h = 3;
-    double s = a * h;
+    public double a = 3;
+    public double b = 3;
+    Scanner scanner = new Scanner(System.in);
 
     public double square() {
+        System.out.println("Введите стороны a и b: ");
+        a = scanner.nextDouble();
+        b = scanner.nextDouble();
+        double s = a * b;
         return s;
 
 
     }
-
-    public static void main(String[] args) {
-        Shape[] shape = new Shape[3];
-        shape[0] = new Triangle();
-        shape[1] = new Circle();
-        shape[2] = new Rectangle();
-        for (Shape sh : shape) {
-            System.out.println("Площадь фигуры: " + sh.square());
-        }
-
-    }
 }
+
+
