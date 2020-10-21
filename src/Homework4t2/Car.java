@@ -4,7 +4,14 @@ public abstract class Car {
     public String model;
     public String grade;
     public int weight;
-    Engine engine = new Engine();
+
+    Engine motor = new Engine(0, "");
+
+    public Car(String model, String grade, int weight) {
+        this.model = model;
+        this.grade = grade;
+        this.weight = weight;
+    }
 
     public abstract void start();
 
@@ -18,7 +25,7 @@ public abstract class Car {
         System.out.println("Поворот налево");
     }
 
-    public abstract void printlnfo();
+    public abstract void printInfo(int power, String generate);
 }
 
 
